@@ -1,3 +1,4 @@
+#não consegui rodar o servidor localmente
 import psycopg2
 
 emissor = psycopg2.connect(
@@ -17,7 +18,7 @@ receptor = psycopg2.connect(
 )
 receptor_cursor = receptor.cursor()
 for coluna in colunas:
-    receptor_cursor.execute("INSERT INTO NOMETABELA VALUES (%s,%s,%s)",coluna)
+    receptor_cursor.execute("INSERT INTO NOMETABELA VALUES (%s, %s,  %s, %s)",coluna)
 
 
 receptor_cursor.commit()
